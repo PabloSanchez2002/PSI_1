@@ -23,7 +23,7 @@ def populate():
     genres = [
         {'name': 'Horror'},
         {'name': 'Thriller'},
-        {'name': 'Science Fiction'},
+        {'name': 'Science Fiction'},django-admin
         {'name': 'Historical'}
     ]
 

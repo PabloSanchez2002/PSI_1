@@ -1,7 +1,7 @@
 """
 Script intended to populate the DB
 Created by JAMI
-EPS-UAM 2023
+EPS-UAM 2023 
 """
 
 import os

@@ -1,0 +1,25 @@
+virtualenv p1_env --python=python3.9
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+
+source p1_env/bin/activate                             
+python3 manage.py runserver
+
+
+#Para el test
+python3 manage.py test catalog.tests.test_first_week --verbosity 2
+
+#Para usar coverage
+coverage erase
+coverage run --omit="*/test*" --source=catalog manage.py test catalog.tests
+coverage report -m -i
+
+
+#Acceder a PSQl
+sudo -u postgres psql
+
+psql -h localhost -p 5432 -U alumnodb psi
+
+\q (salir de psql)
+exit

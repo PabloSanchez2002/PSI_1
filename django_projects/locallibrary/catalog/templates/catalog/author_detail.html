@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<br><br>
+<h1><strong></strong> {{ author.last_name }}, {{ author.first_name }}</h1> 
+<p><strong>Date of birth:</strong> {{ author.date_of_birth }}</p>
+<p><strong>Date of death:</strong> {{ author.date_of_death }}</p>
+
+<div style="margin-left:20px;margin-top:20px">
+
+    {% for book in author.all %}
+    <hr>
+    <p
+        class="{% if book.status == 'a' %}text-success{% elif book.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        {{ book.get_status_display }}
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+
+
+
+

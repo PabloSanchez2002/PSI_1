@@ -3,8 +3,11 @@
 {% block title %}<title> BooksWapos.exe</title>{% endblock %}
 
 {% block content %}
-<h1>Local Library Home</h1>
+{% load static %}
+<h1>Local Library Home </h1>
 <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+<img src="{% static 'chi.gif' %}" alt="Chiquito" width="200" height="200">
+
 <h2>Dynamic content</h2>
 <p>The library has the following record counts:</p>
 <ul>
@@ -14,4 +17,17 @@
     <li><strong>Authors:</strong> {{ num_authors }}</li>
     <li><strong>Books containing word 'The':</strong> {{ num_books_containing_word }}</li>
     <li><strong>Generes containing word 'Horror':</strong> {{ num_generes_containing_word }}</li></ul>
+    
+    <h2>Dynamic content</h2>
+    
+    <p>The library has the following record counts:</p>
+    <ul>
+        <li><strong>Books:</strong> {{ num_books }}</li>
+        <li><strong>Copies:</strong> {{ num_instances }}</li>
+        <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+        <li><strong>Authors:</strong> {{ num_authors }}</li>
+    </ul>
+    
+    <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+
 {% endblock %}

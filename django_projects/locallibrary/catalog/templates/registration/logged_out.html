@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<img src="{% static 'cc.gif' %}" alt="c" width="200" height="200">
+<p>Logged out!</p>
+<a href="{% url 'login'%}">Click here to login again.</a>
+{% endblock %}

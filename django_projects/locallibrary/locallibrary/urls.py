@@ -25,6 +25,8 @@ from django.urls import include
 
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+
 ]
 
 #Add URL maps to redirect the base URL to our application

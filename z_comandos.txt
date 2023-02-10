@@ -1,4 +1,6 @@
 virtualenv p1_env --python=python3.9
+pip install -r requirements.txt
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 
@@ -9,12 +11,15 @@ python3 manage.py runserver
 
 #Para el test
 python3 manage.py test catalog.tests.test_first_week --verbosity 2
+python3 manage.py test catalog.tests.test_second_week --verbosity 2
 
 #Para usar coverage
 coverage erase
 coverage run --omit="*/test*" --source=catalog manage.py test catalog.tests
 coverage report -m -i
 
+user y password
+transa y transa123
 
 #Acceder a PSQl
 sudo -u postgres psql

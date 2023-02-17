@@ -9,4 +9,4 @@ python3 manage.py collectstatic --no-input
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-python manage.py createsu
+python3 catalog/locallibrary/manage.py createsu

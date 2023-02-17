@@ -100,7 +100,8 @@ DATABASES = {
 
 
 import dj_database_url
-db_from_env = dj_database_url.config(default='postgres://alumnodb:alumnodb@localhost:5432/psi', conn_max_age=500)
+#db_from_env = dj_database_url.config(default='postgres://alumnodb:alumnodb@localhost:5432/psi', conn_max_age=500)
+db_from_env = dj_database_url.config(default='postgres://Javojav:PJow1afXQxL4@ep-spring-bar-378814.eu-central-1.aws.neon.tech/neondb', conn_max_age=500)
 
 DATABASES['default'].update(db_from_env)
 

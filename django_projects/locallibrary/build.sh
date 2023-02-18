@@ -9,4 +9,8 @@ python3 manage.py collectstatic --no-input
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-python3 manage.py createsuperuser --noinput --username alumnodb --email alumnodb@alumnodb.com --password alumnodb
+export DJANGO_SUPERUSER_EMAIL=alumnodb@alumnodb.com
+export DJANGO_SUPERUSER_USERNAME=alumnodb
+export DJANGO_SUPERUSER_PASSWORD=alumnodb
+
+python3 manage.py createsuperuser --noinput

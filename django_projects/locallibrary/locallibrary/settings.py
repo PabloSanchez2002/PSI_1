@@ -88,12 +88,23 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'psi',
+    'USER': 'alumnodb',
+    'PASSWORD': 'kg52eLwiPuVq',
+    'HOST': 'ep-spring-bar-378814.eu-central-1.aws.neon.tech',
+    'PORT': '5432',
 }
+
 
 #The following environment variable, called DATABASE_URL, has to be defined
 #at the o.s. level: export DATABASE_URL =
@@ -102,7 +113,7 @@ DATABASES = {
 
 import dj_database_url
 #db_from_env = dj_database_url.config(default='postgres://alumnodb:alumnodb@localhost:5432/psi', conn_max_age=500)
-db_from_env = dj_database_url.config(default='postgres://Javojav:PJow1afXQxL4@ep-spring-bar-378814.eu-central-1.aws.neon.tech/neondb', conn_max_age=500)
+db_from_env = dj_database_url.config(default='postgres://alumnodb:kg52eLwiPuVq@ep-spring-bar-378814.eu-central-1.aws.neon.tech/psi', conn_max_age=500)
 
 DATABASES['default'].update(db_from_env)
 

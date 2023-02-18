@@ -96,13 +96,14 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # }
 
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'psi',
-    'USER': 'alumnodb',
-    'PASSWORD': 'kg52eLwiPuVq',
-    'HOST': 'ep-spring-bar-378814.eu-central-1.aws.neon.tech',
-    'PORT': '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'psi',
+        'USER': 'alumnodb',
+        'PASSWORD': 'kg52eLwiPuVq',
+        'HOST': 'ep-spring-bar-378814.eu-central-1.aws.neon.tech',
+        'PORT': '5432',
+    }
 }
 
 

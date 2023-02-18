@@ -9,4 +9,4 @@ python3 manage.py collectstatic --no-input
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-python3 manage.py createsuperuser --noinput --username "alumnodb" --email "alumnodb@alumnodb.com" --password "alumnodb"
+python3 manage.py createsuperuser --noinput --username alumnodb --email alumnodb@alumnodb.com --password alumnodb

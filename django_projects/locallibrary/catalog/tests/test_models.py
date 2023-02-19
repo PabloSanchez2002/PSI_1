@@ -6,11 +6,10 @@ from catalog.models import Author
 
 
 class AuthorModelTest(TestCase):
-    
     @classmethod
     def setUpTestData(cls):
         """Set up non-modified objects used by all test methods."""
-        Author.objects.create(id = 1, first_name='Big', last_name='Bob')
+        Author.objects.create(id=1, first_name='Big', last_name='Bob')
 
     def test_first_name_label(self):
         author = Author.objects.get(id=1)
@@ -44,7 +43,8 @@ class AuthorModelTest(TestCase):
 
     def test_object_name_is_last_name_comma_first_name(self):
         author = Author.objects.get(id=1)
-        expected_object_name = '{0}, {1}'.format(author.last_name, author.first_name)
+        expected_object_name = '{0}, {1}'.format(
+            author.last_name, author.first_name)
 
         self.assertEqual(str(author), expected_object_name)
 

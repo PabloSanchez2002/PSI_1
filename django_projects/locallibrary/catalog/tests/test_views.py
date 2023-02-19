@@ -265,6 +265,12 @@ class RenewBookInstancesViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
 
         date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
+        #f = open("ZZZZZ.txt", "a")
+        #f.write(response.context['form'].initial['renewal_date'])
+        #f.write(date_3_weeks_in_future)
+        #f.write("holhholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaholholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaaolaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaholaaaaaa\n")
+        #f.close()
+
         self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
 
     def test_form_invalid_renewal_date_past(self):

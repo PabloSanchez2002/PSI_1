@@ -1,0 +1,23 @@
+1. Incluye en la raı́z del proyecto un fichero llamado authors.txt, con el
+nombre de los autores y el número de equipo (pareja).
+2. Calcular la cobertura de los test mediante la utilidad coverage, generando
+un fichero en formato texto (coverage.txt) que debe ser incluido en la
+raı́z de proyecto. El resultado debe ser una tabla similar a la que aparece
+en el Listado 1.
+3. Se debe indicar claramente, y en el momento de la entrega en Moodle, la
+URL donde está desplegado el proyecto en Render. Esta información debe
+aparecer correctamente configurada en el fichero settings.py entregado
+con el proyecto (variable ALLOWED HOSTS). En neon.tech, la base de datos
+debe estar poblada con el contenido del fichero populate catalog.py, y la
+interfaz de administración debe ser accesible mediante el usuario y contra-
+seña exigidos (alumnodb).
+4. Asegurase de que TODOS los test, tanto los de Moodle como los desa-
+rrollados en el tutorial, son satisfechos por el código implementado. No es
+admisible modificar el código de los test proporcionados.
+5. Subir a Moodle, en un único fichero ZIP, el proyecto con todos los fiche-
+ros exigidos y necesarios para ejecutar la aplicación desarrollada en esta
+práctica. En concreto, se deberá subir a Moodle el fichero obtenido tras
+ejecutar el comando "zip -r ../assign1.zip ." o similar, asegurándose
+de incluir todos los ficheros del proyecto, incluida la carpeta oculta .git.
+No entregar el entorno virtual utilizado ni los ficheros con extensión *.pyc.
+
